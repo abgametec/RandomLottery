@@ -25,7 +25,6 @@ def main():
                 new_config["weight"][name] = obj["weight"][name]==0 and 1 or obj["weight"][name]*2
 
 
-    print(new_config)
     with open("./config/" + str(int(config)+1) + ".json", "x") as f:
         f.write(json.dumps(new_config, indent=4))
 
